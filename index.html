@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="media.css">
+    <title>Memory Game</title>
+</head>
+<body>
+
+
+  <div class="container-game">
+    <div class="title">
+         <h1>Memory Game</h1>
+    <p>Match the pairs of cards!</p>
+
+    </div>
+   
+    <div class="game-board">
+        <!-- Cards will be dynamically generated here -->
+    </div>
+
+  
+     <div class="timer">
+      <p>Time: <span id="ore"></span><span id="minuti"></span><span id="secondi"></span></p>
+      <p>Moves: <span id="moves">0</span></p>
+      <p>Pairs Found: <span id="pairs-found">0</span></p>
+
+     </div>
+    <div class="actions">
+          <button id="start-game">Start Game ▶</button>
+    <button id="reset-game">Reset Game 
+      ↻
+      </button>
+
+    </div>
+  
+
+<div class="modal">
+  
+  <h1> 🎉Congratulations 🎉</h1>
+  <h3>You found all the pairs!</h3>
+  <p>Insert your Nickname below</p>
+
+
+  <div class="submit-section">
+   <form class="modal-action">
+  <input type="text" id="nickname" placeholder="Your Nickname"  required/>
+  <button id="submit-button" >Submit</button>
+ </form>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+ <button id='show-classifica'>🏆</button>
+
+
+<div class="classifica ">
+
+  <div class="remove-res">
+    <button  id="close-classifica">X</button>
+
+
+  </div>
+
+
+
+ <div class="results">
+  
+
+  <table id="results-list">
+    <tr>
+      <th>Name</th>
+      <th>Time</th>
+      <th>Moves</th>
+      <th>Date</th>
+    </tr>
+  
+  </table>
+   
+ </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+ 
+
+
+ @media screen and (max-width: 600px) {
+  .flip-card {
+ 
+  }
+
+ .game-board{
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 16px;
+  max-width: 80vw;
+  max-height:  85vh;
+  overflow-y: scroll;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+;
+
+
+
+
+  
+ 
+  }
+ table{
+  table-layout: fixed;
+ }
+ /* #show-classifica{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+ } */
+
+ .classifica {
+  max-width:90vw;
+  
+ td{
+
+ font-size: 1.1em;
+ text-align: center;
+ overflow-x: auto;
+
+
+  }
+ }
+
+}
+    
+
+ 
