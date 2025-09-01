@@ -3,43 +3,50 @@ let options = [
     name: 'HTML',
     type: 'Markup',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-  },
-  {
-    name: 'CSS',
-    type: 'Stylesheet',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-  },
-  {
-    name: 'JavaScript',
-    type: 'Programming',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
-  {
-    name: 'React',
-    type: 'Library',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  },
-  {
-    name: 'Node.js',
-    type: 'Runtime',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-  },
-  {
-    name: 'Python',
-    type: 'Programming',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-  },
-  {
-    name: 'SQL',
-    type: 'Database',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-  },
-  {
-    name: 'Git',
-    type: 'Version Control',
-    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-  }
+ }
+
+
+//   {
+//     name: 'CSS',
+//     type: 'Stylesheet',
+//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+//   },
+//   {
+//     name: 'JavaScript',
+//     type: 'Programming',
+//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+//   },
+//   {
+//     name: 'React',
+//     type: 'Library',
+//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+//   },
+//   {
+//     name: 'Node.js',
+//     type: 'Runtime',
+//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+//   },
+//   {
+//     name: 'Python',
+//     type: 'Programming',
+//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+//   },
+//   {
+//     name: 'SQL',
+//     type: 'Database',
+//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+//   },
+//   {
+//     name: 'Git',
+//     type: 'Version Control',
+//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+//   }
 ];
+
+
+
+const jsConfetti = new JSConfetti()
+
 
 
 
@@ -196,6 +203,12 @@ document.querySelectorAll('flip-card-inner').forEach((card) => {
             choiceTwo.classList.remove('is-flipped');
             choiceOne.classList.add('isCorrect');
             choiceTwo.classList.add('isCorrect');
+
+            choiceOne.querySelector('.flip-card-back').style.border = ' 4px solid var(--purple)';
+            choiceTwo.querySelector('.flip-card-back').style.border = '4px solid var(--purple)';
+
+          
+
          
             pairCountDisplay.textContent = `${coppieTrovate}/8`; // Aggiorna il conteggio delle coppie trovate
 
@@ -280,6 +293,7 @@ const winningGame = (coppie) =>{
 
     clearTimeout(timerId)
             modal.style.display = 'flex';
+            jsConfetti.addConfetti()
           reset_game.disabled = true ;
 
    start_game.disabled = true ;

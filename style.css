@@ -3,7 +3,30 @@
 :root{
     --bg-color:#0a0a1a;
     --white:#fff;
-    --neon:#1a9dc5;
+    --grey:  #6c757d;
+
+    --neon-blu :#1a9dc5;
+    --neon-pink: #FF6EC4;
+    --slate-blue:#7873f5;
+    --purple:#982AFF;
+
+    --soft-green:#12d640;
+    --green:#28a745;
+    --dark-green:#218838;
+
+    --soft-blue:#241e4e;
+    --blue:#1a1a40;
+    --dark-blue:#0d0d2b;
+
+    
+
+    --light-red:#e04552;
+    --red:#dc3545;
+    --dark-red:#c82333;
+
+  
+
+
    
 }
 *{
@@ -27,20 +50,22 @@ background-size: 40px 40px;
 
     font-family: Arial, sans-serif;
 
-    color: var(--white);
+    color: var(--white)
 }
 
 .title{
    font-style: oblique;
     text-align: center;
+        color: var(--white);
     margin: 20px 0;
 
     
 }
 .title h1{
     font-size: 2.2em;
-   color: var(--white);
- background-image:  linear-gradient(45deg, #ff6ec4, #7873f5) ;
+    color:var(--white);
+   
+ background-image: linear-gradient(45deg, var(--neon-pink), var(--slate-blue)) ;
   background-size: 200%,200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -61,7 +86,7 @@ background-size: 40px 40px;
 .title p{
     margin-top:4px;
     font-size: 1.2em;
-    color: var(--white) ; 
+    color: var(--white); 
 }
 
 .container-game{
@@ -88,7 +113,8 @@ background-size: 40px 40px;
     width: 100px;
     height: 100px;
     perspective: 1000px;
-    border: 1px solid var(--neon);
+    border: 1px solid var(--neon-blu
+    );
     border-radius: 10px;
 }
 
@@ -120,24 +146,25 @@ position: absolute;
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    color: var(--neon);
+    color: var(--neon-blu
+    );
 }
 .flip-card-back{
-    border:  2px solid rgb(152, 42, 255) ;
+    /* border:  5px solid var(--purple); */
      
    background-color: #1a1818;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
-    color: #333;
+    /* font-size: 40px; */
+    /* color: var(--grey); */
     transform: rotateY(180deg);
     transition:  background-color 0.5s ease;
 }
 
-.flip-card-back:hover{
+/* .flip-card-back:hover{
  background-color: #36bbc2;
-}
+} */
 
 .flip-card-back img{
     width: 80px;
@@ -194,7 +221,7 @@ margin: 25px;
     color: var(--white);
 
     span{
-        color: #ff6ec4;
+        color: var(--neon-pink);
         margin: 0 5px;
     }
    
@@ -211,7 +238,7 @@ margin: 25px;
     color: var(--white);
 
     span{
-    color: #7873f5;
+    color: var(--slate-blue);
 
     }
 }
@@ -225,7 +252,7 @@ margin: 25px;
    grid-column-start: 3;
 
    span{
-    color: #7873f5;
+    color: var(--slate-blue);
 
    }
 }
@@ -238,38 +265,39 @@ margin: 25px;
 #start-game{
      font-weight: bold;
     text-shadow:  5px 5px 10px rgba(0,0,0,0.2);
+    color:var(--white);
     padding:10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: 2px solid #12d640;
+    background-color:var(--green);
+    color:var(--var(--white));
+    border: 2px solid var(--soft-green);
     border-radius: 16px;
     font-size: 1.1rem;
 }
 #start-game:hover{
-    background-color: #218838;
+    background-color: var(--dark-green);
 }
 
 #reset-game{
     font-weight: bold;
      text-shadow:  5px 5px 10px rgba(0,0,0,0.2);
      padding:10px 20px;
-    background-color: #dc3545;
-    border:  2px solid #e04552;
-    color: white;
+    background-color: var(--red);
+    border:  2px solid  var(--light-red);
+    color: var(--white);
     border-radius: 16px;
     font-size: 1.1rem;
 }
 #reset-game:hover{
-    background-color: #c82333;
+    background-color: var(--dark-red);
 }
 
 .isCorrect{
-border:none;
+
     transform: rotateY(180deg);
 }
 .isIncorrect{
-    background-color: #dc3545;
-    color: white;
+    background-color: var(--red);
+    color: var(--white);
 }
 
 .modal {
@@ -289,20 +317,20 @@ border:none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   
-
-background-color:  #f0f0f0;
+background-color: var(--bg-color);
+backdrop-filter: blur(20px);
 padding:16px 32px;
 border-radius: 10px;
-height:22vh;
+height:30vh;
 
 }
 
 .modal h1 {
-   
+   text-transform: uppercase;
     font-size: 1.8rem;
     margin-bottom: 5x;
     text-align: center;
-    color: #333;
+    color: var(--white);
 
 }
 
@@ -310,7 +338,7 @@ height:22vh;
     font-size: 1.2rem;
     margin-bottom: 5px;
     text-align: center;
-    color: #333;
+    color: var(--white);
 
 }
 
@@ -322,16 +350,16 @@ height:22vh;
 
 .submit-section button {
     cursor: pointer;
-    padding:6px 12px;
+    padding:9px 12px;
     font-size: 0.9rem;
     transition: all 0.5s ease;
-    background-color: #008CBA;
-    color: white;
+    background-color: var(--purple);
+    color: var(--white);
     border: none;
     border-radius: 5px;
 }
 .submit-section button:hover{
-    background-color: #0077b5;
+    background-color: #6a00f4;
 }
 
 .submit-section input{
@@ -388,7 +416,7 @@ border:none;
     transition: all 0.5s ease;
     background-color:transparent ;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    color: white;
+    color: var(--white);
     
     border-radius: 5px;
     transition: all 1s ease;
@@ -439,7 +467,7 @@ tr{
 }
 th{
     background-color: #6a00f4;
-    color: white;
+    color: var(--white);
     padding: 8px;
     text-align: center;
 }
@@ -459,14 +487,14 @@ td{
 
 tr:nth-child(even){
      
-    background-color: #1a1a40;
+    background-color: var(--blue);
 }
 tr:nth-child(odd){
-    background-color: #241e4e;
+    background-color: var(--soft-blue);
 }
 
 tr:hover{
-    background-color: #1d0061;
+    background-color: var(--dark-blue);
 }
 
 
@@ -480,8 +508,8 @@ tr:hover{
     padding:8px 12px;
     font-size: 1rem;
     transition: all 0.5s ease;
-    background-color: #ee0202;
-    color: white;
+    background-color: var(--red);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     transition: all 1s ease;
