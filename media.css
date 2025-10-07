@@ -2,10 +2,13 @@
 
 
  @media screen and (max-width: 600px) {
-  .flip-card {
- 
-  }
-
+.actions{
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  align-items: center;
+}
  .game-board{
  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -23,9 +26,12 @@
 
   
  
-  }
- table{
+ } #results-list{
   table-layout: fixed;
+  width:100% !important;
+  height: 80px;
+  max-height: 100px !important;
+  overflow-y: scroll;
  }
  /* #show-classifica{
     display: none;
@@ -36,15 +42,22 @@
  .classifica {
   max-width:90vw;
   
+  
+ 
+
+
+
+ }
+
  td{
 
- font-size: 1.1em;
+ font-size: 0.6rem ;
  text-align: center;
  overflow-x: auto;
 
 
   }
- }
+
 
 }
     

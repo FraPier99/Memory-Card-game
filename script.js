@@ -4,43 +4,43 @@ let options = [
     type: 'Markup',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
  }
+,
 
-
-//   {
-//     name: 'CSS',
-//     type: 'Stylesheet',
-//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-//   },
-//   {
-//     name: 'JavaScript',
-//     type: 'Programming',
-//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-//   },
-//   {
-//     name: 'React',
-//     type: 'Library',
-//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-//   },
-//   {
-//     name: 'Node.js',
-//     type: 'Runtime',
-//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-//   },
-//   {
-//     name: 'Python',
-//     type: 'Programming',
-//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-//   },
-//   {
-//     name: 'SQL',
-//     type: 'Database',
-//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-//   },
-//   {
-//     name: 'Git',
-//     type: 'Version Control',
-//     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-//   }
+  {
+    name: 'CSS',
+    type: 'Stylesheet',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  },
+  {
+    name: 'JavaScript',
+    type: 'Programming',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  },
+  {
+    name: 'React',
+    type: 'Library',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  },
+  {
+    name: 'Node.js',
+    type: 'Runtime',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  },
+  {
+    name: 'Python',
+    type: 'Programming',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  },
+  {
+    name: 'SQL',
+    type: 'Database',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+  },
+  {
+    name: 'Git',
+    type: 'Version Control',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+  }
 ];
 
 
@@ -587,7 +587,8 @@ td2.textContent =  record.name
      td2.textContent = record.fullTime;
      td3.textContent = record.moves;
      td4.textContent = record.date;
-     td5.textContent =   index == 0 ? '🥇' : index == 1 ? '🥈' : index == 2 ? '🥉' : index
+     td5.textContent =   index == 0 ? '🥇' : index == 1 ? '🥈' : index == 2 ? '🥉' : index +1 
+    //  td5.classList.add(index <=3 ? 'podio' : '')
        listItem.appendChild(td5);
      listItem.appendChild(td);
      listItem.appendChild(td2);
